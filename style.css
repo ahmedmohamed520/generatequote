@@ -1,0 +1,114 @@
+/* 
+## Colors
+
+### Primary
+
+- Light Cyan: hsl(193, 38%, 86%)
+- Neon Green: hsl(150, 100%, 66%)
+
+### Neutral
+
+- Grayish Blue: hsl(217, 19%, 38%)
+- Dark Grayish Blue: hsl(217, 19%, 24%) */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 28px;
+    font-family: "Manrope", sans-serif;
+}
+body {
+    background-color: hsl(217, 19%, 24%);
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    position: relative;
+    width: 30vw;
+    background-color: hsl(217, 19%, 38%);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+}
+.container > :not(h4) {
+    color: hsl(193, 38%, 86%);
+}
+.container h4,
+.container h4 span {
+    color: hsl(150, 100%, 66%);
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.container p {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.quote {
+    font-size: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+.quote::before,
+.quote::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 40%;
+    height: 1px;
+    background-color: hsl(193, 38%, 86%);
+}
+.quote::after {
+    top: 12px;
+    left: 15px;
+}
+.quote::before {
+    top: 12px;
+    right: 15px;
+}
+.dice {
+    display: inline-flex;
+    background-color: hsl(150, 100%, 66%);
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: 0.2s all;
+}
+.dice:hover,
+.dice:active {
+    box-shadow: 0 0 20px 2px hsl(150, 100%, 66%);
+}
+
+/* Mobile */
+@media (max-width: 1200px) {
+    .container {
+        width: 50vw;
+    }
+}
+@media (max-width: 1000px) {
+    .container {
+        width: 60vw;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
