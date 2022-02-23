@@ -11,7 +11,6 @@ const getData = async () => {
     }
     advice.textContent = '"' + data.slip.advice + '"';
     id.textContent = "#" + data.slip.id;
-    console.log(data.slip.advice);
 };
 getData();
 roll.addEventListener("click", () => {
